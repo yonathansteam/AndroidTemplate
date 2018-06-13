@@ -51,4 +51,10 @@
     <!--ORANGE-->
     <color name="color_orange_sumopoint">#ffc266</color>
     <color name="color_orange_sumopoint_border">#ff9900</color>
+
+
+    <color name="msg_no_notes">#999</color>
+    <color name="hint_enter_note">#89c3c3c3</color>
+    <color name="timestamp">#858585</color>
+    <color name="note_list_text">#232323</color>
 </resources>
