@@ -29,6 +29,18 @@
     <dimen name="padding_margin_56dp">56dp</dimen>
     <dimen name="padding_margin_80dp">80dp</dimen>
 
+    <dimen name="standard_margin_half">4dp</dimen>
+    <dimen name="standard_margin">8dp</dimen>
+    <dimen name="standard_marginx1_half">12dp</dimen>
+    <dimen name="standard_marginx2">16dp</dimen>
+    <dimen name="standard_marginx3">24dp</dimen>
+    <dimen name="standard_marginx4">32dp</dimen>
+    <dimen name="standard_marginx5">40dp</dimen>
+    <dimen name="standard_marginx6">48dp</dimen>
+    <dimen name="standard_marginx7">56dp</dimen>
+    <dimen name="standard_marginx8">64dp</dimen>
+
+
     <!--FONT SIZE-->
     <dimen name="text_size_12sp">12sp</dimen>
     <dimen name="text_size_14sp">14sp</dimen>
