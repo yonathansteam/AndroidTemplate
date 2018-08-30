@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Log.v(tag, "on create");
 
         MainFragment mainFragment = MainFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, mainFragment).commitAllowingStateLoss();
+        PlaygroundFragment playgroundFragment = PlaygroundFragment.Companion.newInstance();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, playgroundFragment).commitAllowingStateLoss();
     }
 }
