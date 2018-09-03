@@ -47,6 +47,14 @@ public class Mango extends AbstractItem<Mango, Mango.ViewHolder> {
         return new ViewHolder(v);
     }
 
+    @Override
+    public void bindView(ViewHolder holder) {
+        super.bindView(holder);
+
+        holder.tvtTitle.setText(name);
+        holder.tvDesc.setText(description);
+    }
+
     // Manually create the ViewHolder class
     protected static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -59,6 +67,7 @@ public class Mango extends AbstractItem<Mango, Mango.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+
         }
     }
 }
