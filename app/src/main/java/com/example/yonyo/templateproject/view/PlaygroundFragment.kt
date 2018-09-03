@@ -15,6 +15,7 @@ import com.mikepenz.fastadapter.adapters.FastItemAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
 import kotlinx.android.synthetic.main.fragment_playground.*
+import java.util.*
 
 class PlaygroundFragment : Fragment(){
 
@@ -37,6 +38,13 @@ class PlaygroundFragment : Fragment(){
 
         val mango : List<Mango> = loadMangoes()
         adapter.add(mango)
+
+        val test = HashMap<Key, Any>()
+        test.put(Key("Senin"), "tanggal 1")
+        test.put(Key("Selasa"), "tanggal 2")
+        test[Key("Rabu")] = "tanggal 3"
+
+        println("Get value from hashmap : "+test.get(Key("Senin")))
 
         val kotlinBox: KotlinBox<RedBox> = KotlinBox()
         kotlinBox.response = RedBox()
