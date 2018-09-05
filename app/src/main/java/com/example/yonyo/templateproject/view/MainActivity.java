@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
         PlaygroundFragment playgroundFragment = PlaygroundFragment.Companion.newInstance();
         AnchorFragment anchorFragment = AnchorFragment.Companion.newInstance();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, anchorFragment).commitAllowingStateLoss();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, playgroundFragment).commitAllowingStateLoss();
     }
 }

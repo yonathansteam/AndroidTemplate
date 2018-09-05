@@ -11,6 +11,7 @@ import com.example.yonyo.templateproject.model.Mango
 import com.example.yonyo.templateproject.playground.KotlinBox
 import com.example.yonyo.templateproject.playground.JavaBox
 import com.example.yonyo.templateproject.playground.RedBox
+import com.example.yonyo.templateproject.util.unwrap
 import com.mikepenz.fastadapter.adapters.FastItemAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
@@ -46,11 +47,6 @@ class PlaygroundFragment : Fragment(){
 
         println("Get value from hashmap : "+test.get(Key("Senin")))
 
-        val kotlinBox: KotlinBox<RedBox> = KotlinBox()
-        kotlinBox.response = RedBox()
-
-        val javaBox: JavaBox<RedBox> = JavaBox()
-        javaBox.response = RedBox()
 
         val str = "100"
         val result = str.let {
@@ -61,27 +57,26 @@ class PlaygroundFragment : Fragment(){
 
         println("Result :  $result")
 
-        with(kotlinBox.response){
-            this?.color
+        val nullString: String? = null
+        var nonNullString: String? = "not null"
+
+
+        unwrap(nullString){
+            println("First value : $it")
+        } otherwise{
+            println("First value otherwise")
+        }
+
+        unwrap(nonNullString){
+            println("Second value : $it")
+        }otherwise{
+            println("Second valut otherwise ")
         }
 
 
-        kotlinBox.response?.run {
-            this.color
-        }
-
-        kotlinBox.response.let {
-
-        }
 
 
-        kotlinBox.let {
-            println("Response Kotlin : "+it.response?.color)
-        }
 
-        javaBox.let {
-            println("Response java : "+it.response.color)
-        }
 
     }
 
