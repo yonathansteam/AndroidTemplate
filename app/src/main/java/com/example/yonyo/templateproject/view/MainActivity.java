@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
         MainFragment mainFragment = MainFragment.newInstance();
         PlaygroundFragment playgroundFragment = PlaygroundFragment.Companion.newInstance();
+        PlaygroundFragmentJava pgJava = PlaygroundFragmentJava.newInstance();
         AnchorFragment anchorFragment = AnchorFragment.Companion.newInstance();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, playgroundFragment).commitAllowingStateLoss();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, pgJava).commitAllowingStateLoss();
     }
 }

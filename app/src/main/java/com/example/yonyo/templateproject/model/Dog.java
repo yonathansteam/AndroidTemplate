@@ -10,6 +10,10 @@ public class Dog extends AnimalResponse {
         this.smell = smell;
     }
 
+    public Dog(int cuteness){
+
+    }
+
     public String getBark() {
         return bark;
     }
